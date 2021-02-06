@@ -1,0 +1,25 @@
+//serves as the encryption service
+//reverses string to encrypt
+//rereverses string to decrpyt
+
+public class CSE216Crypto extends CSE216Facade{
+
+
+    public String encrypt(CState msg){
+        String strMsg = msg.getMessage();
+        StringBuilder strBldr = new StringBuilder();
+        strBldr.append(strMsg);
+        String encryptedMsg = strBldr.reverse().toString();
+        return encryptedMsg;
+    }
+
+    public String decrypt(CState msg){
+        String strMsg = msg.getMessage();
+        StringBuilder strBldr = new StringBuilder();
+        strBldr.append(strMsg);
+        String decryptedMsg = strBldr.reverse().toString();
+        return decryptedMsg;
+    }
+
+
+}
